@@ -31,7 +31,7 @@
 
 | 文件 | 形态 | 用途 |
 |------|------|------|
-| [deep-research-tracker.md](deep-research-tracker.md) | 工作流 | 每 1–2 周追踪 Harness Engineering / AI 编程领域新内容 |
+| [deep-research-tracker.md](deep-research-tracker.md) | 工作流 | 每周追踪 Harness Engineering / AI 编程领域新内容 |
 
 ## 下一步
 
