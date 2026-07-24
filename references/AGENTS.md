@@ -5,7 +5,7 @@
 ## 文件约定
 
 - 按主题分文件，如 `articles.md`、`repos.md`、`tools.md`
-- 每条记录包含：链接、一句话说明、与 Harness Engineering 的关联
+- 每条记录包含：链接、一句话说明、与 AI 应用落地的关联
 
 ## 文章
 

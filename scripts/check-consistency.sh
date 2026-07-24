@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # check-consistency.sh — guard against drift between articles.md and downstream caches.
 #
-# Seven checks (per README.md 开发须知):
+# Eight checks (per README.md 开发须知):
 #   C1 — references/articles.md numbering is contiguous 1..N
 #   C2 — N matches downstream count claims (README, deep-research-tracker.md, references/AGENTS.md)
 #        Files with standalone "<!-- check-consistency: skip-count -->" are exempted
@@ -13,6 +13,8 @@
 #        when sources/<slug>/source-full.md exists. SKIPs on CI/clean clones.
 #   C7 — thinking/ feedback/ prose must not bare-write library counts without
 #        snapshot qualifiers (写作时点/当时/此前/首批/首轮/截至/快照)
+#   C8 — works/*-translation.md must declare pipelineRunId and pipelineSource
+#        in frontmatter, preventing direct-to-works writes that bypass translate/
 #
 # Usage:  bash scripts/check-consistency.sh        (run from repo root)
 # Exits 0 on all-pass, 1 on any failure.
@@ -224,6 +226,24 @@ EOF
 if [ "$c7_fails" -eq 0 ]; then
   echo "  $(green PASS) — $c7_hits count mention(s), all snapshot-qualified or none present"
 fi
+
+# ─── C8 ────────────────────────────────────────────────────────────────
+echo "[C8] works translations declare pipeline provenance"
+works_checked=0
+works_missing=0
+for work in works/*-translation.md; do
+  [ -f "$work" ] || continue
+  works_checked=$((works_checked + 1))
+  if grep -qE '^pipelineRunId: .+' "$work" && grep -qE '^pipelineSource: .+' "$work"; then
+    echo "  $(green PASS) — $work: pipeline provenance present"
+  else
+    echo "  $(red FAIL) — $work: missing pipelineRunId or pipelineSource in frontmatter"
+    echo "    fix: formal works entries must be produced via translate/<batch>/works-ready/ and declare provenance"
+    FAIL=1
+    works_missing=$((works_missing + 1))
+  fi
+done
+[ "$works_checked" -eq 0 ] && echo "  $(yellow SKIP) — no works/*-translation.md files"
 
 # ─── Summary ───────────────────────────────────────────────────────────
 echo ""

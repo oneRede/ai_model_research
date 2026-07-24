@@ -1,11 +1,11 @@
 ---
 name: curate-research
-description: 把一批 Harness Engineering 调研候选（文章/论文/工具的 URL）走完「抓取→翻译→评审→收录→清理」流水线，整合进本仓库 works/ 与 references/articles.md，并保持 C1–C12 一致性检查全绿。当用户说"处理这批调研候选 / 收录这些链接 / 整理 translate / 把这几篇翻译收进来"时使用。这是仓库给自己用的策展 harness。
+description: 把一批 AI 应用调研候选（文章/论文/工具的 URL）严格走完「抓取→翻译→评审→收录→清理」流水线，整合进本仓库 works/ 与 references/articles.md，并保持一致性检查全绿。当用户说"处理这批调研候选 / 收录这些链接 / 整理 translate / 把这几篇翻译收进来"时使用。这是仓库给自己用的策展 harness。
 ---
 
-# curate-research —— 仓库自我策展 harness
+# curate-research —— AI 应用仓库自我策展 harness
 
-> 一个讲 Harness Engineering 的仓库，用一个 harness 来策展自己。本 skill 把外部调研候选可控地整合进 tracked 档案。
+> 一个追踪 AI 应用落地案例的仓库，用一个 harness 来策展自己。本 skill 把外部调研候选可控地整合进 tracked 档案。
 >
 > **核心约束：评审全自动；收录是人类闸门，必须停下来和用户来回讨论后才动 `works/` 与 `articles.md`。**
 
@@ -31,15 +31,27 @@ description: 把一批 Harness Engineering 调研候选（文章/论文/工具�
 ```
 
 ### ① 抓取
-用 `baoyu-url-to-markdown` 把每个 URL 存到 `sources/<slug>/source.md`。**论文/长文必须额外抓 HTML 全文到 `source-full.md`**（否则只有摘要页，C8 会拦谎报）。
+用 `baoyu-url-to-markdown` 把每个 URL 存到 `sources/<slug>/source.md`。**论文/长文必须额外抓 HTML/PDF 全文到 `source-full.md`**（否则只有摘要页，C6 会拦谎报）。
+
+**不可跳过约束：**
+- 不得直接根据 WebSearch 摘要写 `works/`。
+- `sources/<slug>/source.md` 不存在时，不得进入翻译、评审或收录。
+- 如果 `baoyu-url-to-markdown` 不可用、URL 403/404、或只能拿到摘要页，必须停下来报告阻塞并询问用户是否允许 fallback；未经明确授权，不得静默改用摘要。
+- 被用户授权 fallback 时，必须写 `translate/<batch>/00-fetch-log.md`，逐条记录：原工具不可用原因、替代抓取方法、缺失内容、风险。
 
 ### ② 翻译
 按 baoyu-translate 配置生成 `translations/<slug>/` 三件套 → `works-ready/<slug>-translation.md`。`01-analysis.md` 要含收录建议；`source-full.md` 存在时，分析稿不得声称「仅摘要页」。
 
+**不可跳过约束：**
+- 每个候选必须有 `translations/<slug>/01-analysis.md`、`02-prompt.md`、`translation.md`，缺一不可。
+- 准备进入 `works/` 的候选必须先生成 `works-ready/<slug>-translation.md`；`works/` 只能从 `works-ready/` 复制，不得手写或直接生成。
+- `works-ready/<slug>-translation.md` 的 frontmatter 必须包含 `pipelineRunId` 与 `pipelineSource`，指向本批 `translate/<batch>/works-ready/...`。
+- 如果只是中文摘要/译介而非完整翻译，文件名不得使用 `*-translation.md`，也不得计入正式翻译数；应作为观察项或改用非 translation 命名。
+
 ### ③ 评审（全自动并行扇出）
 对每篇候选派一个评审 agent（一批 3–4 篇，并行多个 agent）。统一打分维度，吐结构化定性。**标准评审 prompt 模板：**
 
-> 你是 Harness Engineering 中文知识库的内容评审。仓库主题：人类设计约束与反馈回路、AI agent 写代码。
+> 你是 AI 应用中文知识库的内容评审。仓库主题：AI 在医疗、金融、游戏、工业、科研、企业等领域的实际落地应用。
 > 读 `sources/<slug>/source.md`(+`source-full.md`)、`works-ready/<slug>-translation.md`、`translations/<slug>/01-analysis.md`，逐篇回答：
 > - **原文价值**：原创洞察密度 / 长文实质 vs 产品页·发布稿·摘要。高/中/低
 > - **翻译质量**：完整逐译 / 压缩摘要 / 首轮粗稿；通顺度、术语到位度。精品/合格/需返工
@@ -53,7 +65,7 @@ description: 把一批 Harness Engineering 调研候选（文章/论文/工具�
 把评审表交给用户，**来回讨论收录决策**。精品 vs 边角的边界判断、是否返工、哪些合并成专题——都由人定。**未经用户确认，不得进入 ④。**
 
 ### ④ 收录（按减熵分流规则）
-- **实质原创长文 / 论文 → `works/`**：`cp` 到 `works/<slug>-translation.md`，在 `articles.md` 加一个 `### N.` 编号条目（脉络一末尾，旧编号顺移），并**同步全部计数缓存**（见下）。
+- **实质原创长文 / 论文 → `works/`**：只能 `cp translate/<batch>/works-ready/<slug>-translation.md works/<slug>-translation.md`，在 `articles.md` 加一个 `### N.` 编号条目，并**同步全部计数缓存**（见下）。
 - **边角材料**（产品页 / README / 发布稿 / 短 bliki）**→ articles.md「观察项 / 候选材料（不计入文章数）」表一行**，链上游 URL，不做编号条目（文章数不变）。
 - **需返工的长文**：先润色（事实核查加译者注 / 术语统一）再进 `works/`。
 

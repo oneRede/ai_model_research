@@ -47,6 +47,7 @@ ai_application_research/
 - **C5** — `references/articles.md` 末尾"不计入 N 篇"中的 N ≡ C1 权威值
 - **C6** — 翻译流水线本地守卫：`translate/<...>/sources/<slug>/source-full.md` 存在时，对应 `01-analysis.md` 不得再声称"仅摘要页 / 建议补抓全文"。`translate/` 已 gitignore，CI 与干净 clone 自动 SKIP，仅本地有过程稿时触发
 - **C7** — / `thinking/` / `feedback/` 正文不得裸写文库计数（"N 篇文章 / N 篇翻译 / N 大概念"）；历史性提法须带"写作时点 / 当时 / 此前 / 首批 / 首轮 / 截至 / 快照"限定词，否则去数字改链 `references/articles.md`
+- **C8** — `works/*-translation.md` 必须在 frontmatter 声明 `pipelineRunId` 与 `pipelineSource`，防止绕过 `translate/<batch>/works-ready/` 直接写入正式档案
 
 执行：`bash scripts/check-consistency.sh`（仓库根目录）
 启用 pre-commit 阻断：`git config core.hooksPath .githooks`

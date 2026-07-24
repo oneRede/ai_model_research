@@ -7,6 +7,8 @@ source: https://github.blog/ai-and-ml/github-copilot/how-we-built-an-internal-da
 translator: Claude (Opus 4.8)
 translationDate: 2026-07-24
 sourceFigureCount: null
+pipelineRunId: 2026-07-ai-applications-refocus
+pipelineSource: legacy/manual-refocus
 ---
 
 # GitHub 如何构建内部数据分析 AI Agent：Qubot

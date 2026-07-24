@@ -2,10 +2,6 @@
 
 > 追踪和收录全球 AI 应用的最新进展、实践案例和商业化趋势
 
-# AI 应用进展追踪
-
-> 追踪和收录全球 AI 应用的最新进展、实践案例和商业化趋势
-
 ## 前言
 
 这是一个不断生长的学习项目。利用智能体（agent）实现 AI 应用领域内容的自动化收录与整理。
@@ -49,17 +45,21 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（1 篇）
+### 翻译作品（5 篇）
 
 | 标题 | 来源 | 主题 |
 |------|------|------|
 | [GitHub 如何构建内部数据分析 Agent](works/github-qubot-analytics-agent-translation.md) | GitHub Blog | 企业数据分析应用 |
+| [AI 病历审查如何识别罕见病临床试验候选患者](works/cleveland-clinic-dyania-chart-review-translation.md) | Cleveland Clinic / Dyania Health | 医疗 AI / 临床试验招募 |
+| [生成式 AI 在轮胎制造预测性维护中的应用](works/genai-predictive-maintenance-tyre-manufacturing-translation.md) | Production Planning & Control | 工业制造 / 预测性维护 |
+| [大型银行如何用 Agentic AI 加强反欺诈检测](works/fsb-agentic-ai-fraud-detection-translation.md) | Financial Stability Board | 金融风控 / Agentic AI |
+| [DiffSyn：生成式 AI 如何帮助科学家合成复杂材料](works/mit-diffsyn-materials-synthesis-translation.md) | MIT News / Nature Computational Science | AI for Science / 材料合成 |
 
 完整索引见 [references/articles.md](references/articles.md)
 
 ## 🛠️ 开发须知
 
-仓库自带一致性检查脚本 `scripts/check-consistency.sh`，守护数量类漂移，覆盖九层校验：
+仓库自带一致性检查脚本 `scripts/check-consistency.sh`，守护数量类漂移，覆盖八层校验：
 
 - **C1** — `references/articles.md` 编号 1..N 连续
 - **C2** — N 与下游 3 处声明同步（README、`prompts/deep-research-tracker.md` 头部、`references/AGENTS.md` 概览）。文件含独立行 `<!-- check-consistency: skip-count -->` 时豁免
@@ -68,6 +68,7 @@ ai_application_research/
 - **C5** — `references/articles.md` 末尾"不计入 N 篇"中的 N ≡ C1 权威值
 - **C6** — 翻译流水线本地守卫：`translate/<...>/sources/<slug>/source-full.md` 存在时，对应 `01-analysis.md` 不得再声称"仅摘要页 / 建议补抓全文"。`translate/` 已 gitignore，CI 与干净 clone 自动 SKIP，仅本地有过程稿时触发
 - **C7** — / `thinking/` / `feedback/` 正文不得裸写文库计数（"N 篇文章 / N 篇翻译 / N 大概念"）；历史性提法须带"写作时点 / 当时 / 此前 / 首批 / 首轮 / 截至 / 快照"限定词，否则去数字改链 `references/articles.md`
+- **C8** — `works/*-translation.md` 必须在 frontmatter 声明 `pipelineRunId` 与 `pipelineSource`，防止绕过 `translate/<batch>/works-ready/` 直接写入正式档案
 
 **首次 clone 后启用 pre-commit hook：**
 

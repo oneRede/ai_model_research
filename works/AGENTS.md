@@ -23,6 +23,8 @@ sourcePublishedAt: # 原文日期（未知可为 null）
 translationMethod: # 翻译方式
 language: "zh-CN"
 sourceFigureCount: # 原文插图数（数字；null = 原文不可得、未审计）
+pipelineRunId:     # 策展批次 ID；正式收录必须存在
+pipelineSource:    # 对应 translate/<batch>/works-ready/<file>；存量手工条目写 legacy/...
 ```
 
 **插图与外链约定**：
@@ -34,6 +36,10 @@ sourceFigureCount: # 原文插图数（数字；null = 原文不可得、未审�
 | 文件 | 原文 | 来源 | 领域 |
 |------|------|------|------|
 | [github-qubot-analytics-agent-translation.md](github-qubot-analytics-agent-translation.md) | How We Built an Internal Data Analytics Agent | GitHub Engineering | 企业应用 |
+| [cleveland-clinic-dyania-chart-review-translation.md](cleveland-clinic-dyania-chart-review-translation.md) | AI-Driven Chart Review Accurately Identifies Potential Rare Disease Trial Participants | Cleveland Clinic / Dyania Health | 医疗 AI |
+| [genai-predictive-maintenance-tyre-manufacturing-translation.md](genai-predictive-maintenance-tyre-manufacturing-translation.md) | Harnessing Generative Artificial Intelligence for Predictive Maintenance | Production Planning & Control | 工业制造 |
+| [fsb-agentic-ai-fraud-detection-translation.md](fsb-agentic-ai-fraud-detection-translation.md) | Strengthening Fraud Detection with Agentic AI | Financial Stability Board | 金融风控 |
+| [mit-diffsyn-materials-synthesis-translation.md](mit-diffsyn-materials-synthesis-translation.md) | DiffSyn: A Generative Diffusion Approach to Materials Synthesis Planning | MIT / Nature Computational Science | AI for Science |
 
 ## 作品方向参考
 
