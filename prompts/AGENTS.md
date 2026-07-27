@@ -20,18 +20,18 @@
 
 | 场景 | 说明 |
 |------|------|
-| 项目初始化 | 让智能体生成仓库骨架、AGENTS.md、CI 配置 |
-| 代码生成 | 在架构约束下生成业务代码 |
-| 代码审查 | 智能体审查智能体生成的代码 |
-| 重构清理 | 熵管理 / 垃圾回收 |
-| 文档维护 | doc-gardening 智能体的提示词 |
-| 情报追踪 | 定期发现领域内新内容（见 deep-research-tracker.md） |
+| 技术论文翻译 | 结构化翻译 AI 模型相关论文 |
+| 模型能力分析 | 对比分析不同模型的技术特点 |
+| 技术综述生成 | 整合多篇论文产出领域综述 |
+| 评测数据提取 | 从论文中提取基准测试数据 |
+| 架构图解析 | 理解和描述模型架构创新点 |
+| 情报追踪 | 定期发现 AI 大模型领域新进展（见 deep-research-tracker.md） |
 
 ## 已有内容
 
 | 文件 | 形态 | 用途 |
 |------|------|------|
-| [deep-research-tracker.md](deep-research-tracker.md) | 工作流 | 每周追踪 Harness Engineering / AI 编程领域新内容 |
+| [deep-research-tracker.md](deep-research-tracker.md) | 工作流 | 每周追踪 AI 大模型领域技术进展 |
 
 ## 下一步
 

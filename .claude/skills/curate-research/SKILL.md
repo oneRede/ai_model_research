@@ -1,11 +1,11 @@
 ---
 name: curate-research
-description: 把一批 AI 应用调研候选（文章/论文/工具的 URL）严格走完「抓取→翻译→评审→收录→清理」流水线，整合进本仓库 works/ 与 references/articles.md，并保持一致性检查全绿。当用户说"处理这批调研候选 / 收录这些链接 / 整理 translate / 把这几篇翻译收进来"时使用。这是仓库给自己用的策展 harness。
+description: 把一批 AI 大模型技术进展候选（文章/论文/技术报告的 URL）严格走完「抓取→翻译→评审→收录→清理」流水线，整合进本仓库 works/ 与 references/articles.md，并保持一致性检查全绿。当用户说"处理这批调研候选 / 收录这些链接 / 整理 translate / 把这几篇翻译收进来"时使用。这是仓库给自己用的策展 harness。
 ---
 
-# curate-research —— AI 应用仓库自我策展 harness
+# curate-research —— AI 大模型进展仓库自我策展 harness
 
-> 一个追踪 AI 应用落地案例的仓库，用一个 harness 来策展自己。本 skill 把外部调研候选可控地整合进 tracked 档案。
+> 一个追踪 AI 大模型技术进展的仓库，用一个 harness 来策展自己。本 skill 把外部调研候选可控地整合进 tracked 档案。
 >
 > **核心约束：评审全自动；收录是人类闸门，必须停下来和用户来回讨论后才动 `works/` 与 `articles.md`。**
 
@@ -14,6 +14,9 @@ description: 把一批 AI 应用调研候选（文章/论文/工具的 URL）严
 - 用户给出一批候选 URL（文章 / 论文 / 工具 / 项目），希望整合进仓库
 - 用户说「处理 / 收录 / 整理」`translate/` 暂存区的翻译
 - 已有 `translate/<batch>/works-ready/` 候选译文，要决定去向
+
+**重要提示：本仓库已安装并可优先使用两个子 skill：`baoyu-url-to-markdown` 和 `baoyu-translate`。**
+**当当前运行时支持 `Skill` 调用时，应直接调用这两个 skill，而不是把它们当作不存在的全局命令；不要跳过抓取、翻译或 works-ready 暂存步骤。**
 
 ## 输入与产物路径
 
@@ -40,7 +43,8 @@ description: 把一批 AI 应用调研候选（文章/论文/工具的 URL）严
 - 被用户授权 fallback 时，必须写 `translate/<batch>/00-fetch-log.md`，逐条记录：原工具不可用原因、替代抓取方法、缺失内容、风险。
 
 ### ② 翻译
-按 baoyu-translate 配置生成 `translations/<slug>/` 三件套 → `works-ready/<slug>-translation.md`。`01-analysis.md` 要含收录建议；`source-full.md` 存在时，分析稿不得声称「仅摘要页」。
+- 按 baoyu-translate 配置生成 `translations/<slug>/` 三件套 → `works-ready/<slug>-translation.md`。`01-analysis.md` 要含收录建议；`source-full.md` 存在时，分析稿不得声称「仅摘要页」。
+- 翻译要求baoyu-translate采用高质量全文完整翻译，不得使用精简翻译
 
 **不可跳过约束：**
 - 每个候选必须有 `translations/<slug>/01-analysis.md`、`02-prompt.md`、`translation.md`，缺一不可。
@@ -51,11 +55,12 @@ description: 把一批 AI 应用调研候选（文章/论文/工具的 URL）严
 ### ③ 评审（全自动并行扇出）
 对每篇候选派一个评审 agent（一批 3–4 篇，并行多个 agent）。统一打分维度，吐结构化定性。**标准评审 prompt 模板：**
 
-> 你是 AI 应用中文知识库的内容评审。仓库主题：AI 在医疗、金融、游戏、工业、科研、企业等领域的实际落地应用。
+> 你是 AI 大模型技术进展中文知识库的内容评审。仓库主题：AI 大模型的技术进展，包括新模型发布、架构创新、训练技术、对齐与安全、评测基准、模型能力研究、推理优化、硬件基础设施、数据工程等。
 > 读 `sources/<slug>/source.md`(+`source-full.md`)、`works-ready/<slug>-translation.md`、`translations/<slug>/01-analysis.md`，逐篇回答：
-> - **原文价值**：原创洞察密度 / 长文实质 vs 产品页·发布稿·摘要。高/中/低
+> - **技术价值**：是否涉及模型技术突破、新方法论、重要实验结果？深度 vs 浅层报道。高/中/低
+> - **信息密度**：技术细节丰富度、可复现性、数据完整性。实质论文/技术报告 vs 产品发布稿/市场分析。高/中/低
 > - **翻译质量**：完整逐译 / 压缩摘要 / 首轮粗稿；通顺度、术语到位度。精品/合格/需返工
-> - **与仓库契合度**：补薄弱环节还是重复
+> - **与仓库契合度**：是否填补技术盲区、是否与已有内容重复
 > - **一句话定性 + 建议去向**：works/ 正式收录 / articles.md 观察项一行 / 暂不收录
 > 基于实际内容，紧凑中文，结构化输出即为最终产出。
 

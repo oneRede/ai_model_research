@@ -1,25 +1,26 @@
-# AI 应用进展追踪
+# AI 大模型进展追踪
 
-> 追踪和收录全球 AI 应用的最新进展、实践案例和商业化趋势
+> 追踪和收录全球 AI 大模型的最新技术进展，聚焦模型、算法、数据、硬件层面的创新与突破。
 
 ## 前言
 
-这是一个不断生长的学习项目。利用智能体（agent）实现 AI 应用领域内容的自动化收录与整理。
+这是一个不断生长的学习项目。利用智能体（agent）实现 AI 大模型领域技术进展的自动化收录与整理。
 
 ## 收录范围
 
-**聚焦 AI 应用的实际落地场景**，包括但不限于：
+**聚焦 AI 大模型的技术进展与能力边界**，包括但不限于：
 
-- **医疗健康**：AI 辅助诊断、药物研发、医学影像分析、临床决策支持
-- **金融科技**：智能投顾、风险控制、反欺诈、量化交易
-- **游戏娱乐**：AI NPC、游戏设计、内容生成
-- **工业制造**：智能制造、预测性维护、供应链优化、质量控制
-- **企业应用**：客服机器人、数据分析、流程自动化、知识管理
-- **科研教育**：科学计算、材料发现、AI for Science、个性化学习
-- **设计创作**：AI 设计工具、艺术创作、内容生成
-- **消费产品**：个人 AI 助手、智能硬件、生活服务
+- **新模型发布**：GPT、Claude、Gemini、LLaMA 等主流模型的版本更新与能力演进
+- **架构创新**：Transformer 变体、MoE（混合专家）、状态空间模型、新注意力机制
+- **训练技术**：预训练方法、持续学习、长上下文扩展、多模态融合训练
+- **对齐与安全**：RLHF、Constitutional AI、Red Teaming、数据合成、安全护栏
+- **评测基准**：新的评测方法、基准数据集、能力测试框架（推理、规划、工具使用等）
+- **模型能力研究**：涌现能力、泛化性、鲁棒性、可解释性、上下文学习
+- **推理优化**：量化、剪枝、蒸馏、KV-cache 优化、投机解码
+- **硬件与基础设施**：训练集群架构、GPU/TPU 优化、分布式训练、推理加速
+- **数据工程**：高质量数据集构建、数据清洗、合成数据生成、数据配比策略
 
-**不收录**：纯开发工具（IDE、Coding Agent 框架）、模型训练技术、纯学术理论（除非有明确应用场景）。
+**不收录**：纯应用案例（除非展示模型新能力）、开发工具与框架（LangChain、LlamaIndex 等）、商业分析与市场报告。
 
 ## 核心概念
 
@@ -45,15 +46,9 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（5 篇）
+### 翻译作品（0 篇）
 
-| 标题 | 来源 | 主题 |
-|------|------|------|
-| [GitHub 如何构建内部数据分析 Agent](works/github-qubot-analytics-agent-translation.md) | GitHub Blog | 企业数据分析应用 |
-| [AI 病历审查如何识别罕见病临床试验候选患者](works/cleveland-clinic-dyania-chart-review-translation.md) | Cleveland Clinic / Dyania Health | 医疗 AI / 临床试验招募 |
-| [生成式 AI 在轮胎制造预测性维护中的应用](works/genai-predictive-maintenance-tyre-manufacturing-translation.md) | Production Planning & Control | 工业制造 / 预测性维护 |
-| [大型银行如何用 Agentic AI 加强反欺诈检测](works/fsb-agentic-ai-fraud-detection-translation.md) | Financial Stability Board | 金融风控 / Agentic AI |
-| [DiffSyn：生成式 AI 如何帮助科学家合成复杂材料](works/mit-diffsyn-materials-synthesis-translation.md) | MIT News / Nature Computational Science | AI for Science / 材料合成 |
+目前仓库正在重新聚焦大模型技术进展，欢迎贡献高质量内容。
 
 完整索引见 [references/articles.md](references/articles.md)
 
@@ -86,6 +81,6 @@ git config core.hooksPath .githooks
 
 ## 🤖 自动化策展
 
-> 这个仓库通过智能体实现内容的自动化收录。
+> 这个仓库通过智能体实现大模型技术进展的自动化收录。
 >
 > 收录流程固化为 skill 流水线 [`curate-research`](.claude/skills/curate-research/SKILL.md)：评审由并行 agent 自动完成，`scripts/check-consistency.sh` 守护计数一致性，而"是否收录"的决策权始终由人类掌握。
