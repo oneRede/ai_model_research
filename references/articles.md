@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**3 篇文章**。最近一次同步：2026-07-29。
+> 当前规模：**4 篇文章**。最近一次同步：2026-07-29。
 ---
 
 ## 📚 文章索引
@@ -66,9 +66,26 @@
   - 与流水线并行兼容，解决循环模型扩展难题
 - **技术价值**：A 级（新的模型扩展范式）
 
+### 4. OlmoEarth 平台：行星级地理空间推理
+- **原标题**：The OlmoEarth Platform: Geospatial inference at planetary scale
+- **作者**：Allen Institute for AI (Ai2)
+- **日期**：2026-07-28
+- **类型**：工程技术博客
+- **来源**：Allen Institute for AI Blog
+- **译文**：[works/olmoearth-platform-geospatial-inference.md](../works/olmoearth-platform-geospatial-inference.md)
+- **原文**：https://allenai.org/blog/olmoearth-infrastructure
+- **核心创新**：
+  - OlmoEarth Run：行星级地理空间推理执行层
+  - 三阶段流水线：CPU 预处理 → GPU 推理 → CPU 后处理
+  - 分区并行：数千实例并行，155× 加速（4,737 小时 → 30.5 小时）
+  - 自动故障恢复：检查点 + 重试 + 幂等性，99% 完成率
+  - 成本效率：每平方公里不到一美分，大陆级推理约 1 天
+  - 多云支持：Google Cloud + 可扩展到其他云环境
+- **技术价值**：A 级（大规模地理空间推理基础设施）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 3 篇）
+## 🔍 观察项 / 候选材料（不计入 4 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
