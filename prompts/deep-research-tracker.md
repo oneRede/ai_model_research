@@ -8,7 +8,7 @@
 ## Prompt A：ChatGPT Deep Research — 广度发现
 
 ```
-你是一个 AI 技术情报分析师。请对以下领域进行深度网络搜索，找出过去 1 周内（{START_DATE} 至 {END_DATE}）发布的高价值内容。
+你是一个 AI大模型 技术情报分析师。请对以下领域进行深度网络搜索，找出过去 1 周内（{START_DATE} 至 {END_DATE}）发布的高价值内容。
 
 ### 搜索领域
 
