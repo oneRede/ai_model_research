@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**4 篇文章**。最近一次同步：2026-07-29。
+> 当前规模：**6 篇文章**。最近一次同步：2026-07-31。
 ---
 
 ## 📚 文章索引
@@ -83,9 +83,41 @@
   - 多云支持：Google Cloud + 可扩展到其他云环境
 - **技术价值**：A 级（大规模地理空间推理基础设施）
 
+### 5. CoSA：通过代理-内核协同设计的稀疏注意力加速长上下文推理
+- **原标题**：CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention
+- **作者**：Yufei Xue, Lin Niu, Hong Liu 等（腾讯）
+- **日期**：2026-07-28
+- **类型**：学术论文
+- **来源**：arXiv:2607.25291
+- **译文**：[works/cosa-sparse-attention-translation.md](../works/cosa-sparse-attention-translation.md)
+- **原文**：https://arxiv.org/abs/2607.25291
+- **核心创新**：
+  - 代理-内核协同设计的两阶段稀疏注意力
+  - 内核感知代理（KAP）：利用 OSM 行最大值标志重排序键块
+  - 有序跳过内核（OSK）：动态跳过低贡献块
+  - 性能突破：128K 上下文下 4.93× 注意力加速，2.53× TTFT 减少
+  - 在 RULER 和 LongBench-v2 上以最低预算达到最高准确率
+- **技术价值**：S 级（长上下文推理优化的重大突破，系统-算法协同设计范式）
+
+### 6. ForgetBench：大语言模型长期参数记忆遗忘动态基准
+- **原标题**：ForgetBench: Benchmarking Forgetting Dynamics of Long-Term Parametric Memory in Language Models
+- **作者**：Ruxi Gu, Zhenliang Zhang, Wei Wang
+- **日期**：2026-07-29
+- **类型**：学术论文
+- **来源**：arXiv:2607.26455
+- **译文**：[works/forgetbench-translation.md](../works/forgetbench-translation.md)
+- **原文**：https://arxiv.org/abs/2607.26455
+- **核心创新**：
+  - ForgetBench 基准：首个系统性评估 LLM 持续知识编辑中遗忘行为的框架
+  - 双范式评测：concept-based QA（孤立事实）+ scenario-based QA（关系知识）
+  - 时序编辑框架：使用时序有序的知识流进行顺序编辑
+  - 统一评估指标：temporal decay（时间衰减）、retention strength（保留强度）、cross-instance stability（跨实例稳定性）
+  - 实证发现：现有知识编辑方法难以平衡长期保留与泛化质量
+- **技术价值**：A 级（知识编辑领域新评测基准，填补持续学习评估空白）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 4 篇）
+## 🔍 观察项 / 候选材料（不计入 6 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
