@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**7 篇文章**。最近一次同步：2026-07-31。
+> 当前规模：**8 篇文章**。最近一次同步：2026-08-01。
 ---
 
 ## 📚 文章索引
@@ -131,9 +131,26 @@
   - 意识问题讨论：通达意识 vs 现象意识，与神经科学的双向启发
 - **技术价值**：S 级（可解释性研究重大突破，AI 对齐与安全的实用工具）
 
+### 8. SVR：通过联合判定-置信度强化学习实现自适应测试时计算的自我验证精炼
+- **原标题**：SVR: Self-Verifying Refinement via Joint Verdict-Confidence Reinforcement Learning for Adaptive Test-Time Compute
+- **作者**：Hongyu Chen, Liang Lin, Guangrun Wang（中山大学）
+- **日期**：2026-07-30
+- **类型**：学术论文
+- **来源**：arXiv:2607.28457
+- **译文**：[works/svr-self-verifying-refinement-translation.md](../works/svr-self-verifying-refinement-translation.md)
+- **原文**：https://arxiv.org/abs/2607.28457
+- **核心创新**：
+  - 自我验证精炼（SVR）：无预言机的多轮强化学习框架
+  - 联合判定-置信度输出：每轮生成（解决方案 + Correct/Incorrect/Unsure 判定 + 0-1 置信度）
+  - 自适应停止规则：仅当判定为 Correct 且置信度 ≥ 阈值时保留答案
+  - 基于 GRPO 的固定视界训练：整合求解、自我验证和格式奖励
+  - Qwen3.5-2B 在 7 个数学推理基准上达到 0.563 准确率，平均 2.99 轮推理
+  - 超越固定预算和预言机引导基线，token 消耗仅为十样本投票的 51%
+- **技术价值**：S 级（测试时计算自适应分配的重大突破，无需外部验证器）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 7 篇）
+## 🔍 观察项 / 候选材料（不计入 8 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|

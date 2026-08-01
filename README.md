@@ -46,13 +46,14 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（3 篇）
+### 翻译作品（4 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
 | CoSA：通过代理-内核协同设计的稀疏注意力加速长上下文推理 | 学术论文 | 2026-07-28 | [works/cosa-sparse-attention-translation.md](works/cosa-sparse-attention-translation.md) |
 | ForgetBench: 大语言模型长期参数记忆遗忘动态基准 | 学术论文 | 2026-07-29 | [works/forgetbench-translation.md](works/forgetbench-translation.md) |
 | 语言模型中的全局工作空间 | 研究报告 | 2026 年 | [works/global-workspace-translation.md](works/global-workspace-translation.md) |
+| SVR：通过联合判定-置信度强化学习实现自适应测试时计算的自我验证精炼 | 学术论文 | 2026-07-30 | [works/svr-self-verifying-refinement-translation.md](works/svr-self-verifying-refinement-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 

@@ -35,7 +35,10 @@ pipelineSource:    # 对应 translate/<batch>/works-ready/<file>；存量手工�
 
 | 文件 | 原文 | 来源 | 领域 |
 |------|------|------|------|
-| _待补充_ | - | - | - |
+| cosa-sparse-attention-translation.md | CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention | arXiv:2607.25291 | 长上下文推理优化 |
+| forgetbench-translation.md | ForgetBench: Benchmarking Forgetting Dynamics of Long-Term Parametric Memory in Language Models | arXiv:2607.26455 | 知识编辑与持续学习 |
+| global-workspace-translation.md | A global workspace in language models | Anthropic Research | 可解释性研究 |
+| svr-self-verifying-refinement-translation.md | SVR: Self-Verifying Refinement via Joint Verdict-Confidence Reinforcement Learning for Adaptive Test-Time Compute | arXiv:2607.28457 | 测试时计算优化 |
 
 ## 作品方向参考
 
