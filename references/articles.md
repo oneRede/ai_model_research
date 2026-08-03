@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**8 篇文章**。最近一次同步：2026-08-01。
+> 当前规模：**11 篇文章**。最近一次同步：2026-08-03。
 ---
 
 ## 📚 文章索引
@@ -148,9 +148,59 @@
   - 超越固定预算和预言机引导基线，token 消耗仅为十样本投票的 51%
 - **技术价值**：S 级（测试时计算自适应分配的重大突破，无需外部验证器）
 
+### 9. LATCH：扩散语言模型的候选感知解码
+- **原标题**：Where and When to Commit: Candidate-Aware Decoding for Diffusion Language Models
+- **作者**：Chia-Ming Lee, Ming-Ching Chang, Xin Li, Yu-Lun Liu, Chih-Chung Hsu
+- **日期**：2026-07-30
+- **类型**：学术论文
+- **来源**：arXiv:2607.28166
+- **译文**：[works/latch-diffusion-acceleration-translation.md](../works/latch-diffusion-acceleration-translation.md)
+- **原文**：https://arxiv.org/abs/2607.28166
+- **核心创新**：
+  - 双轴解耦设计：CVC（置信度验证提交）控制全局终止，BWEC（分块提前提交）控制局部加速
+  - 候选感知提前退出：动态提取候选答案，验证置信度 + argmax 稳定性
+  - 任务相关稳定化时机：短答案 s_0.9=0.04 vs 长推理 s_0.9=0.96
+  - 单套超参数跨任务/模型通用：无需针对任务或模型调优
+  - 短答案任务：9.3-17.8× TPS 加速，长推理任务：2.0-3.3× TPS 加速
+  - 在 11 任务、2 模型（LLaDA/Dream）上保持准确率 ±2.0 点以内
+- **技术价值**：S 级（扩散语言模型推理加速重大突破，训练无关优化新范式）
+
+### 10. 从专家归约到行为分歧：追踪稀疏 MoE 推理中的数值状态
+- **原标题**：From Expert Reduction to Behavioral Divergence: Tracing Numerical State through Sparse MoE Inference
+- **作者**：Tianyang Zhu（独立研究者）
+- **日期**：2026-07-30
+- **类型**：学术论文
+- **来源**：arXiv:2607.28097
+- **译文**：[works/sparse-moe-numerical-state-translation.md](../works/sparse-moe-numerical-state-translation.md)
+- **原文**：https://arxiv.org/abs/2607.28097
+- **核心创新**：
+  - 揭示数学上等价的专家归约顺序在有限精度下产生可观测的不同执行结果
+  - 四种聚合方案（P32/C/A/B）：分离操作数表示与累加器精度的影响
+  - 事件方向分化：中文提示"朋友昨天打来电话"产生 202 个裁员 vs. 113 个招聘延续
+  - 状态边界验证：mHC 后状态（token 内边界）和完整持久状态（跨 token 边界）的充分性
+  - 受控实验：精确端点重建在 DeepSeek-V4-Flash 上复现分支轨迹
+  - 确定性重放：10 个 64-token 分支完全可重现，证明分歧非随机性
+- **技术价值**：S 级（MoE 数值稳定性的重大发现，为运行时和硬件设计提供数值兼容性契约）
+
+### 11. 虚拟宽度网络
+- **原标题**：Virtual Width Networks
+- **作者**：ByteDance Seed Team
+- **日期**：2025-11-17
+- **类型**：学术论文
+- **来源**：arXiv:2511.11238
+- **译文**：[works/virtual-width-networks-translation.md](../works/virtual-width-networks-translation.md)
+- **原文**：https://arxiv.org/abs/2511.11238
+- **核心创新**：
+  - 虚拟宽度网络（VWN）：解耦嵌入宽度与骨干网络宽度，扩展表征能力而计算成本几乎不变
+  - 广义超连接（GHC）：统一 Hyper-Connections 和 Frac-Connections 的轻量级连接机制
+  - 对数线性缩放关系：虚拟宽度因子与损失之间的缩放定律
+  - 大规模验证：3.3B MoE 模型，8× 虚拟宽度扩展，token 效率提升 2-3 倍
+  - 与多 token 预测（MTP）协同：虚拟宽度与密集监督的互补增益
+- **技术价值**：S 级（突破宽度-计算二次方耦合，提出模型扩展新维度，理论 + 大规模验证）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 8 篇）
+## 🔍 观察项 / 候选材料（不计入 11 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|

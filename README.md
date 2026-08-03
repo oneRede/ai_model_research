@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（4 篇）
+### 翻译作品（7 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -54,6 +54,9 @@ ai_application_research/
 | ForgetBench: 大语言模型长期参数记忆遗忘动态基准 | 学术论文 | 2026-07-29 | [works/forgetbench-translation.md](works/forgetbench-translation.md) |
 | 语言模型中的全局工作空间 | 研究报告 | 2026 年 | [works/global-workspace-translation.md](works/global-workspace-translation.md) |
 | SVR：通过联合判定-置信度强化学习实现自适应测试时计算的自我验证精炼 | 学术论文 | 2026-07-30 | [works/svr-self-verifying-refinement-translation.md](works/svr-self-verifying-refinement-translation.md) |
+| LATCH：扩散语言模型的候选感知解码 | 学术论文 | 2026-07-30 | [works/latch-diffusion-acceleration-translation.md](works/latch-diffusion-acceleration-translation.md) |
+| 从专家归约到行为分歧：追踪稀疏 MoE 推理中的数值状态 | 学术论文 | 2026-07-30 | [works/sparse-moe-numerical-state-translation.md](works/sparse-moe-numerical-state-translation.md) |
+| 虚拟宽度网络 | 学术论文 | 2025-11-17 | [works/virtual-width-networks-translation.md](works/virtual-width-networks-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 

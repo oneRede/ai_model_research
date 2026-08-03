@@ -39,6 +39,9 @@ pipelineSource:    # 对应 translate/<batch>/works-ready/<file>；存量手工�
 | forgetbench-translation.md | ForgetBench: Benchmarking Forgetting Dynamics of Long-Term Parametric Memory in Language Models | arXiv:2607.26455 | 知识编辑与持续学习 |
 | global-workspace-translation.md | A global workspace in language models | Anthropic Research | 可解释性研究 |
 | svr-self-verifying-refinement-translation.md | SVR: Self-Verifying Refinement via Joint Verdict-Confidence Reinforcement Learning for Adaptive Test-Time Compute | arXiv:2607.28457 | 测试时计算优化 |
+| latch-diffusion-acceleration-translation.md | Where and When to Commit: Candidate-Aware Decoding for Diffusion Language Models | arXiv:2607.28166 | 扩散语言模型加速 |
+| sparse-moe-numerical-state-translation.md | From Expert Reduction to Behavioral Divergence: Tracing Numerical State through Sparse MoE Inference | arXiv:2607.28097 | MoE 数值稳定性 |
+| virtual-width-networks-translation.md | Virtual Width Networks | arXiv:2511.11238 | Transformer 架构创新 |
 
 ## 作品方向参考
 
