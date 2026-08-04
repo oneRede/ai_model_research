@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**11 篇文章**。最近一次同步：2026-08-03。
+> 当前规模：**12 篇文章**。最近一次同步：2026-08-04。
 ---
 
 ## 📚 文章索引
@@ -198,9 +198,26 @@
   - 与多 token 预测（MTP）协同：虚拟宽度与密集监督的互补增益
 - **技术价值**：S 级（突破宽度-计算二次方耦合，提出模型扩展新维度，理论 + 大规模验证）
 
+### 12. GFlowRL：将分布匹配强化学习扩展到大语言模型
+- **原标题**：GFlowRL: Scaling Distribution-Matching RL to Large Language Models
+- **作者**：Xiaodong Liu, Michael Xu, Jack W. Stokes, Paul Smolensky, Doug Burger, Jianfeng Gao
+- **日期**：2026-07-27
+- **类型**：学术论文
+- **来源**：arXiv:2607.13394v1
+- **译文**：[works/gflowrl-scaling-distribution-matching-llm-post-training.md](../works/gflowrl-scaling-distribution-matching-llm-post-training.md)
+- **原文**：https://arxiv.org/abs/2607.13394
+- **核心创新**：
+  - 用批内蒙特卡洛估计替代可学习配分函数，移除辅助网络
+  - 梯度范数从 10^14 降至 10^-2，恢复训练稳定性
+  - 重要性采样校正 + 非对称流间隙裁剪两大稳定器
+  - 14B 模型 Codeforces 2048 评分（超越 o1 +157 Elo，接近 o3-mini）
+  - AdvBench/HarmBench 红队测试 SOTA（82.5%/79.5% ASR@1）
+  - 首次在稠密+稀疏架构（最大 235B MoE）稳定扩展 GFlowNets
+- **技术价值**：A 级（LLM 后训练核心算法突破，分布匹配 RL 工程化里程碑）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 11 篇）
+## 🔍 观察项 / 候选材料（不计入 12 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|

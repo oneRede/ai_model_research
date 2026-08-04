@@ -46,10 +46,12 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（7 篇）
+### 翻译作品（12 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
+| Kimi K3：开放前沿智能 | 技术报告 | 2026-07-27 | [works/kimi-k3-open-frontier-intelligence.md](works/kimi-k3-open-frontier-intelligence.md) |
+| 在 NVIDIA GB300 NVL72 上创造 MoE 预训练世界记录 | 技术博客 | 2026-07-21 | [works/nvidia-gb300-moe-training-world-record.md](works/nvidia-gb300-moe-training-world-record.md) |
 | CoSA：通过代理-内核协同设计的稀疏注意力加速长上下文推理 | 学术论文 | 2026-07-28 | [works/cosa-sparse-attention-translation.md](works/cosa-sparse-attention-translation.md) |
 | ForgetBench: 大语言模型长期参数记忆遗忘动态基准 | 学术论文 | 2026-07-29 | [works/forgetbench-translation.md](works/forgetbench-translation.md) |
 | 语言模型中的全局工作空间 | 研究报告 | 2026 年 | [works/global-workspace-translation.md](works/global-workspace-translation.md) |
@@ -57,6 +59,7 @@ ai_application_research/
 | LATCH：扩散语言模型的候选感知解码 | 学术论文 | 2026-07-30 | [works/latch-diffusion-acceleration-translation.md](works/latch-diffusion-acceleration-translation.md) |
 | 从专家归约到行为分歧：追踪稀疏 MoE 推理中的数值状态 | 学术论文 | 2026-07-30 | [works/sparse-moe-numerical-state-translation.md](works/sparse-moe-numerical-state-translation.md) |
 | 虚拟宽度网络 | 学术论文 | 2025-11-17 | [works/virtual-width-networks-translation.md](works/virtual-width-networks-translation.md) |
+| GFlowRL：将分布匹配强化学习扩展到大语言模型 | 学术论文 | 2026-07-27 | [works/gflowrl-scaling-distribution-matching-llm-post-training.md](works/gflowrl-scaling-distribution-matching-llm-post-training.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
