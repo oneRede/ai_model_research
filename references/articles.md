@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**13 篇文章**。最近一次同步：2026-08-04。
+> 当前规模：**14 篇文章**。最近一次同步：2026-08-04。
 ---
 
 ## 📚 文章索引
@@ -233,9 +233,26 @@
   - 1B 参数模型超越 1.8B Cola-DLM，在昇腾 NPU 上完成所有实验
 - **技术价值**：S 级（连续语言生成范式突破，解耦表示学习与分布建模的方法论创新）
 
+### 14. MA-LoT：基于多智能体 Lean 的长链式思考推理增强形式化定理证明
+- **原标题**：MA-LoT: Multi-Agent Lean-based Long Chain-of-Thought Reasoning enhances Formal Theorem Proving
+- **作者**：Ruida Wang, Rui Pan, Yuxin Li, Jipeng Zhang, Yizhen Jia, Shizhe Diao, Renjie Pi, Junjie Hu, Tong Zhang
+- **日期**：2025-03
+- **类型**：学术论文
+- **来源**：arXiv:2503.03205
+- **译文**：[works/ma-lot-multi-agent-lean-long-cot-theorem-proving-translation.md](../works/ma-lot-multi-agent-lean-long-cot-theorem-proving-translation.md)
+- **原文**：https://ar5iv.labs.arxiv.org/html/2503.03205
+- **核心创新**：
+  - 首个多智能体 Lean4 定理证明框架：Prover Agent（完整证明生成）+ Corrector Agent（错误分析与修正）
+  - LoT-Transfer Learning（LoT-TL）训练流程：使形式化推理能力在 Long CoT 中涌现，无需专门标注数据
+  - 三阶段训练：NL Long CoT（126K 数据）→ Lean SFT（54K 数据）→ Correction（64K 数据）
+  - 系统提示控制 Long CoT 开关：训练时 WITHOUT（占位符）、推理时 WITH（激活能力）
+  - MiniF2F-Test 达到 61.07% 准确率（GPT-4: 22.95%, 树搜索: 50.70%, 完整证明: 55.33%）
+  - 成功证明 IMO/AIME 级别问题，消融实验验证各组件有效性
+- **技术价值**：S 级（形式化验证与 Long CoT 结合的首个框架，多智能体协作新范式）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 13 篇）
+## 🔍 观察项 / 候选材料（不计入 14 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
