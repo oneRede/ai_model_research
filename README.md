@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（12 篇）
+### 翻译作品（13 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -60,6 +60,7 @@ ai_application_research/
 | 从专家归约到行为分歧：追踪稀疏 MoE 推理中的数值状态 | 学术论文 | 2026-07-30 | [works/sparse-moe-numerical-state-translation.md](works/sparse-moe-numerical-state-translation.md) |
 | 虚拟宽度网络 | 学术论文 | 2025-11-17 | [works/virtual-width-networks-translation.md](works/virtual-width-networks-translation.md) |
 | GFlowRL：将分布匹配强化学习扩展到大语言模型 | 学术论文 | 2026-07-27 | [works/gflowrl-scaling-distribution-matching-llm-post-training.md](works/gflowrl-scaling-distribution-matching-llm-post-training.md) |
+| AURORA-LM：面向连续潜在扩散语言建模的自编码统一表示 | 学术论文 | 2026-08-03 | [works/aurora-lm-continuous-latent-diffusion-translation.md](works/aurora-lm-continuous-latent-diffusion-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 

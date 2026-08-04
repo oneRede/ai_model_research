@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**12 篇文章**。最近一次同步：2026-08-04。
+> 当前规模：**13 篇文章**。最近一次同步：2026-08-04。
 ---
 
 ## 📚 文章索引
@@ -215,9 +215,27 @@
   - 首次在稠密+稀疏架构（最大 235B MoE）稳定扩展 GFlowNets
 - **技术价值**：A 级（LLM 后训练核心算法突破，分布匹配 RL 工程化里程碑）
 
+### 13. AURORA-LM：面向连续潜在扩散语言建模的自编码统一表示
+- **原标题**：AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling
+- **作者**：Jiajun Liang, Yucheng Liao, Yukang Cao, Jiazhe Wei, Ken Li, Wende Tan, Jiankun Zhang, ZY Cui, Jingkang Yang, Liucheng Guo, Shiqi Yang, B. Yang, Caifeng Shan, Ziwei Liu, Chenyang Si
+- **日期**：2026-08-03
+- **类型**：学术论文
+- **来源**：arXiv:2608.02602v1
+- **译文**：[works/aurora-lm-continuous-latent-diffusion-translation.md](../works/aurora-lm-continuous-latent-diffusion-translation.md)
+- **原文**：https://arxiv.org/abs/2608.02602
+- **核心创新**：
+  - 解耦设计：将可解码文本表示构建与生成分布建模分离
+  - Query-based Encoder-Decoder：构建高容量、前缀对齐的潜在序列
+  - Block-causal Diffusion Transformer：通过流匹配学习全宽度潜在分布
+  - 输入瓶颈策略：仅对噪声输入路径应用低秩投影（Db=128），保留全宽度清洁潜在预测目标（D=1024）
+  - Self-trajectory Consistency：对齐去噪轨迹上相邻状态的预测
+  - 噪声级别校准：tan-d 调度将噪声分配调整到潜在宽度
+  - 1B 参数模型超越 1.8B Cola-DLM，在昇腾 NPU 上完成所有实验
+- **技术价值**：S 级（连续语言生成范式突破，解耦表示学习与分布建模的方法论创新）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 12 篇）
+## 🔍 观察项 / 候选材料（不计入 13 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
