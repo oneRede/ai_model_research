@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（14 篇）
+### 翻译作品（15 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -62,6 +62,7 @@ ai_application_research/
 | GFlowRL：将分布匹配强化学习扩展到大语言模型 | 学术论文 | 2026-07-27 | [works/gflowrl-scaling-distribution-matching-llm-post-training.md](works/gflowrl-scaling-distribution-matching-llm-post-training.md) |
 | AURORA-LM：面向连续潜在扩散语言建模的自编码统一表示 | 学术论文 | 2026-08-03 | [works/aurora-lm-continuous-latent-diffusion-translation.md](works/aurora-lm-continuous-latent-diffusion-translation.md) |
 | MA-LoT：基于多智能体 Lean 的长链式思考推理增强形式化定理证明 | 学术论文 | 2025-03 | [works/ma-lot-multi-agent-lean-long-cot-theorem-proving-translation.md](works/ma-lot-multi-agent-lean-long-cot-theorem-proving-translation.md) |
+| 轻量语言模型的检索增强推理 | 学术论文 | 2025-08-15 | [works/lean-language-model-rag-reasoning-translation.md](works/lean-language-model-rag-reasoning-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 

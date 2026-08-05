@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**14 篇文章**。最近一次同步：2026-08-04。
+> 当前规模：**15 篇文章**。最近一次同步：2026-08-05。
 ---
 
 ## 📚 文章索引
@@ -250,9 +250,28 @@
   - 成功证明 IMO/AIME 级别问题，消融实验验证各组件有效性
 - **技术价值**：S 级（形式化验证与 Long CoT 结合的首个框架，多智能体协作新范式）
 
+### 15. 轻量语言模型的检索增强推理
+- **原标题**：Retrieval-Augmented Reasoning with Lean Language Models
+- **作者**：Ryan Sze-Yin Chan, Federico Nanni, Tomas Lazauskas, Rosie Wood, Penelope Yong, Lionel Tarassenko, Mark Girolami, James Geddes, Andrew Duncan
+- **日期**：2025-08-15
+- **类型**：学术论文（技术报告）
+- **来源**：arXiv:2508.11386
+- **译文**：[works/lean-language-model-rag-reasoning-translation.md](../works/lean-language-model-rag-reasoning-translation.md)
+- **原文**：https://arxiv.org/abs/2508.11386
+- **核心创新**：
+  - 在单个轻量模型架构（1.5B-32B）中整合推理与检索增强生成（RAG）
+  - 密集检索器 + 微调 Qwen2.5-Instruct：利用 DeepSeek-R1 推理轨迹进行领域特定微调
+  - 文档摘要压缩：减少 85% 文档长度，平均上下文从 74,641 tokens 降至 7,544 tokens
+  - NHS 医疗知识库案例：990 条目、1000 评估样本、2000 训练样本
+  - 合成数据生成 + 推理轨迹蒸馏 + 预算强制（budget-forcing）测试时计算控制
+  - 32B 模型病症识别准确率 56%，接近前沿模型（GPT-4o/o3-mini/DeepSeek-R1）
+  - 1.5B 模型病症识别 53%，超越 32B 非推理基线（54%）
+  - 完整开源实现 + 3700 GPU 小时计算资源详情（Azure/Baskerville/Isambard-AI）
+- **技术价值**：A 级（轻量模型 RAG+推理整合工程化方案，隐私保护场景实用突破）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 14 篇）
+## 🔍 观察项 / 候选材料（不计入 15 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
