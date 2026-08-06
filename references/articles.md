@@ -68,20 +68,20 @@
 
 ### 4. OlmoEarth 平台：行星级地理空间推理
 - **原标题**：The OlmoEarth Platform: Geospatial inference at planetary scale
-- **作者**：Allen Institute for AI (Ai2)
+- **作者**：Allen Institute for AI
 - **日期**：2026-07-28
-- **类型**：工程技术博客
+- **类型**：技术博客
 - **来源**：Allen Institute for AI Blog
-- **译文**：[works/olmoearth-platform-geospatial-inference.md](../works/olmoearth-platform-geospatial-inference.md)
+- **译文**：[works/olmoearth-infrastructure-translation.md](../works/olmoearth-infrastructure-translation.md)
 - **原文**：https://allenai.org/blog/olmoearth-infrastructure
 - **核心创新**：
   - OlmoEarth Run：行星级地理空间推理执行层
   - 三阶段流水线：CPU 预处理 → GPU 推理 → CPU 后处理
-  - 分区并行：数千实例并行，155× 加速（4,737 小时 → 30.5 小时）
-  - 自动故障恢复：检查点 + 重试 + 幂等性，99% 完成率
-  - 成本效率：每平方公里不到一美分，大陆级推理约 1 天
-  - 多云支持：Google Cloud + 可扩展到其他云环境
-- **技术价值**：A 级（大规模地理空间推理基础设施）
+  - 大规模并行：19,600 CPUs + 994 GPUs，155× 加速（4,737h → 30.5h）
+  - 容错设计：幂等任务、自动重试、多源回退
+  - 成本效率：每平方公里不到一美分，大陆级推理约一天
+  - 元数据索引：避免压垮外部 STAC API，窗口化读取云优化格式
+- **技术价值**：A 级（地球观测基础模型工业级部署架构）
 
 ### 5. CoSA：通过代理-内核协同设计的稀疏注意力加速长上下文推理
 - **原标题**：CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention

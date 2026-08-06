@@ -52,6 +52,7 @@ ai_application_research/
 |------|------|---------|------|
 | Kimi K3：开放前沿智能 | 技术报告 | 2026-07-27 | [works/kimi-k3-open-frontier-intelligence.md](works/kimi-k3-open-frontier-intelligence.md) |
 | 在 NVIDIA GB300 NVL72 上创造 MoE 预训练世界记录 | 技术博客 | 2026-07-21 | [works/nvidia-gb300-moe-training-world-record.md](works/nvidia-gb300-moe-training-world-record.md) |
+| OlmoEarth 平台：行星级地理空间推理 | 技术博客 | 2026-07-28 | [works/olmoearth-infrastructure-translation.md](works/olmoearth-infrastructure-translation.md) |
 | CoSA：通过代理-内核协同设计的稀疏注意力加速长上下文推理 | 学术论文 | 2026-07-28 | [works/cosa-sparse-attention-translation.md](works/cosa-sparse-attention-translation.md) |
 | ForgetBench: 大语言模型长期参数记忆遗忘动态基准 | 学术论文 | 2026-07-29 | [works/forgetbench-translation.md](works/forgetbench-translation.md) |
 | 语言模型中的全局工作空间 | 研究报告 | 2026 年 | [works/global-workspace-translation.md](works/global-workspace-translation.md) |
