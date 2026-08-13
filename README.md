@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（18 篇）
+### 翻译作品（19 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -67,6 +67,7 @@ ai_application_research/
 | LLaDA MoE v2：扩展混合专家扩散语言模型 | 学术论文 | 2026-08-04 | [works/llada-moe-v2-scaling-diffusion-language-models-translation.md](works/llada-moe-v2-scaling-diffusion-language-models-translation.md) |
 | 全带宽 Transformer | 学术论文 | 2026-08-09 | [works/arxiv-2608-08888-translation.md](works/arxiv-2608-08888-translation.md) |
 | Transformer 是贝叶斯网络 | 学术论文 | 2026-03-17 | [works/arxiv-2603-17063-translation.md](works/arxiv-2603-17063-translation.md) |
+| 超循环 Transformer | 学术论文 | 2026-04-23 | [works/arxiv-2604-21254-translation.md](works/arxiv-2604-21254-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
