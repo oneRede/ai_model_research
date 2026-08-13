@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**15 篇文章**。最近一次同步：2026-08-05。
+> 当前规模：**16 篇文章**。最近一次同步：2026-08-13。
 ---
 
 ## 📚 文章索引
@@ -269,9 +269,27 @@
   - 完整开源实现 + 3700 GPU 小时计算资源详情（Azure/Baskerville/Isambard-AI）
 - **技术价值**：A 级（轻量模型 RAG+推理整合工程化方案，隐私保护场景实用突破）
 
+### 16. LLaDA MoE v2：扩展混合专家扩散语言模型
+- **原标题**：LLaDA MoE v2: Scaling Mixture-of-Experts Diffusion Language Models
+- **作者**：Fengqi Zhu, Shaoxuan Xu, Jingyang Ou, Zebin You, Yipeng Xing, Huabin Liu, Xiaolu Zhang, Jun Zhou, Zhenzhong Lan, Yankai Lin, Wayne Xin Zhao, Jianguo Li, Chongxuan Li, Ji-Rong Wen（人大高瓴 AI 学院、蚂蚁集团）
+- **日期**：2026-08-04
+- **类型**：学术论文
+- **来源**：arXiv:2608.03457
+- **译文**：[works/llada-moe-v2-scaling-diffusion-language-models-translation.md](../works/llada-moe-v2-scaling-diffusion-language-models-translation.md)
+- **原文**：https://arxiv.org/abs/2608.03457
+- **核心创新**：
+  - 首次系统表征 MoE 扩散语言模型（dLLMs）的缩放行为，识别与 AR 模型的量化差异
+  - 优化缩放：最优 batch size 增长指数 0.3481（比 AR 更陡），学习率衰减指数 -0.2447（比 AR 更快）
+  - 计算分配：IsoFLOP 分析揭示略偏数据侧的配置（M*∝C^0.475, D*∝C^0.525）
+  - MoE 架构缩放：更大规模偏好更低激活比例，适度专家粒度（G=8–16）稳健，共享专家比例（S=33.3%）跨规模稳定
+  - 大规模验证：30B-A3B 模型在 23.5T tokens（Qwen3 的 65%）上训练，在知识/推理/编码基准上接近 Qwen3
+  - 仅经 SFT 在 8 个推理/编码任务中的 7 个上超越 SDAR Chat，无需 RL 阶段
+  - 受控实验：10^17–10^20 FLOPs 多档位扫描，三维架构扫描（激活比例/专家粒度/共享专家比例）
+- **技术价值**：S 级（首次系统化 MoE dLLM 缩放定律，填补该领域空白，理论+大规模验证完整）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 15 篇）
+## 🔍 观察项 / 候选材料（不计入 16 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
