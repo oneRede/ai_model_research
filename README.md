@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（16 篇）
+### 翻译作品（17 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -65,6 +65,7 @@ ai_application_research/
 | MA-LoT：基于多智能体 Lean 的长链式思考推理增强形式化定理证明 | 学术论文 | 2025-03 | [works/ma-lot-multi-agent-lean-long-cot-theorem-proving-translation.md](works/ma-lot-multi-agent-lean-long-cot-theorem-proving-translation.md) |
 | 轻量语言模型的检索增强推理 | 学术论文 | 2025-08-15 | [works/lean-language-model-rag-reasoning-translation.md](works/lean-language-model-rag-reasoning-translation.md) |
 | LLaDA MoE v2：扩展混合专家扩散语言模型 | 学术论文 | 2026-08-04 | [works/llada-moe-v2-scaling-diffusion-language-models-translation.md](works/llada-moe-v2-scaling-diffusion-language-models-translation.md) |
+| 全带宽 Transformer | 学术论文 | 2026-08-09 | [works/arxiv-2608-08888-translation.md](works/arxiv-2608-08888-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 

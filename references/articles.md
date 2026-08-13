@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> 当前规模：**16 篇文章**。最近一次同步：2026-08-13。
+> 当前规模：**17 篇文章**。最近一次同步：2026-08-13。
 ---
 
 ## 📚 文章索引
@@ -287,9 +287,28 @@
   - 受控实验：10^17–10^20 FLOPs 多档位扫描，三维架构扫描（激活比例/专家粒度/共享专家比例）
 - **技术价值**：S 级（首次系统化 MoE dLLM 缩放定律，填补该领域空白，理论+大规模验证完整）
 
+### 17. 全带宽 Transformer
+- **原标题**：Full-bandwidth transformer
+- **作者**：Xi Wang, Ziyang Cai, Zheng Zhan, Harry Dong, Ying Fan, Gustavo de Rosa, Tim Pearce, John Langford（Johns Hopkins University, Princeton University, Microsoft）
+- **日期**：2026-08-09
+- **类型**：学术论文
+- **来源**：arXiv:2608.08888
+- **译文**：[works/arxiv-2608-08888-translation.md](../works/arxiv-2608-08888-translation.md)
+- **原文**：https://arxiv.org/abs/2608.08888
+- **核心创新**：
+  - 识别自回归 Transformer 的"窄垂直通道"限制：步间仅传递采样 token（log₂|V| bits），顶层隐藏状态（D 维）被丢弃
+  - 潜在反馈解码：通过门控线性单元（GLU）将前一步顶层隐藏状态与当前 token 嵌入融合，拓宽反馈通道至完整 D 维
+  - 时间并行性训练：多遍前向传播（temporal parallelism）解决递归结构的并行训练难题，保留教师强制效率
+  - 渐进调度 + 收缩映射：晚期引入反馈（75% 单遍 + 22% 双遍 + 3% 三遍），3% 三遍批次使反馈映射成为收缩映射，在 1000 遍外推时保持稳定
+  - 1B 参数模型在 400B tokens 上训练，数据效率提升 1.5×-5×（匹配使用更多数据的标准 Transformer）
+  - 推理开销可忽略（< 1% per token），与 vLLM 等现有基础设施兼容
+  - 基础模型生成更短推理轨迹且准确率相当或更好（GSM8K、Math500、HumanEval、MBPP）
+  - 改进通过指令微调延续，融合预填充（Fused）改善非生成任务性能
+- **技术价值**：S 级（Transformer 架构核心创新，首次系统解决步间反馈带宽问题，理论+训练+验证完整）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 16 篇）
+## 🔍 观察项 / 候选材料（不计入 17 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
