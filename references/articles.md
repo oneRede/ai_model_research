@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> **当前规模：22 篇文章**。最近一次同步：2026-08-14。
+> **当前规模：23 篇文章**。最近一次同步：2026-08-14。
 ---
 
 ## 📚 文章索引
@@ -399,9 +399,27 @@
   - 实验验证：TL;DR 摘要任务胜率优于基线，通用对话生成更受偏好的响应
 - **技术价值**：S 级（为 RLHF 提供严格理论正当性，统一框架允许不同方法理论比较，首次从理论上确认 RLHF 优于 DPO 的经验发现，填补对齐领域理论基础空白）
 
+### 23. VecInfer：通过离群值抑制向量量化实现高效低比特 KV 缓存的 LLM 推理
+- **原标题**：VecInfer: Efficient LLM Inference with Low-Bit KV Cache via Outlier-Suppressed Vector Quantization
+- **作者**：Dingyu Yao, Chenxu Yang, Zhengyang Tong, Zheng Lin, Wei Liu, Jian Luan, Weiping Wang
+- **日期**：2026-07（ACL 2026）
+- **类型**：学术论文
+- **来源**：ACL 2026 (Volume 1: Long Papers), pages 31527–31543
+- **译文**：[works/acl-2026-1454-translation.md](../works/acl-2026-1454-translation.md)
+- **原文**：https://aclanthology.org/2026.acl-long.1454/
+- **代码**：https://github.com/ydyhello/VecInfer
+- **核心创新**：
+  - 双重变换抑制离群值：平滑变换 + 哈达玛变换，降低键缓存量化难度
+  - SVD 分析证明变换有效性：减小通道级方差，产生无离群值的均匀分布
+  - 融合 CUDA 内核：反量化-计算融合，细粒度分块 + 异步流水线，最小化内存访问
+  - 2-bit 量化达 FP16 精度，Llama-3.1-8B (196k) 上实现 2.7× 自注意力加速、8.3× 端到端延迟降低
+  - LongBench 和 MATH 任务验证，1.25/1.5/2/3/4-bit 全面优于 KIVI/ZipCache/CQ/MILLION
+  - 任务无关码本：双重变换后的均匀分布使码本全面覆盖数据空间
+- **技术价值**：S 级（KV 缓存向量量化的重大突破，解决超低比特量化的核心难题，系统实现完整且开源，填补仓库 KV 缓存量化方向空白）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 22 篇）
+## 🔍 观察项 / 候选材料（不计入 23 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
