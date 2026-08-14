@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（21 篇）
+### 翻译作品（22 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -70,6 +70,7 @@ ai_application_research/
 | 超循环 Transformer | 学术论文 | 2026-04-23 | [works/arxiv-2604-21254-translation.md](works/arxiv-2604-21254-translation.md) |
 | 可变宽度 Transformer | 学术论文 | 2026-06-16 | [works/arxiv-2606-18246-translation.md](works/arxiv-2606-18246-translation.md) |
 | SlimQwen：大规模 MoE 模型预训练中的剪枝与蒸馏探索 | 学术论文 | 2026-05-18 | [works/arxiv-2605-08738-translation.md](works/arxiv-2605-08738-translation.md) |
+| 超越 RLHF：对齐的统一理论框架 | 学术论文 | 2026-05-18 | [works/arxiv-2506-01523-translation.md](works/arxiv-2506-01523-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
