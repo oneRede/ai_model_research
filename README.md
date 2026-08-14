@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（19 篇）
+### 翻译作品（20 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -68,6 +68,7 @@ ai_application_research/
 | 全带宽 Transformer | 学术论文 | 2026-08-09 | [works/arxiv-2608-08888-translation.md](works/arxiv-2608-08888-translation.md) |
 | Transformer 是贝叶斯网络 | 学术论文 | 2026-03-17 | [works/arxiv-2603-17063-translation.md](works/arxiv-2603-17063-translation.md) |
 | 超循环 Transformer | 学术论文 | 2026-04-23 | [works/arxiv-2604-21254-translation.md](works/arxiv-2604-21254-translation.md) |
+| 可变宽度 Transformer | 学术论文 | 2026-06-16 | [works/arxiv-2606-18246-translation.md](works/arxiv-2606-18246-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
