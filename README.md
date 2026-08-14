@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（20 篇）
+### 翻译作品（21 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -69,6 +69,7 @@ ai_application_research/
 | Transformer 是贝叶斯网络 | 学术论文 | 2026-03-17 | [works/arxiv-2603-17063-translation.md](works/arxiv-2603-17063-translation.md) |
 | 超循环 Transformer | 学术论文 | 2026-04-23 | [works/arxiv-2604-21254-translation.md](works/arxiv-2604-21254-translation.md) |
 | 可变宽度 Transformer | 学术论文 | 2026-06-16 | [works/arxiv-2606-18246-translation.md](works/arxiv-2606-18246-translation.md) |
+| SlimQwen：大规模 MoE 模型预训练中的剪枝与蒸馏探索 | 学术论文 | 2026-05-18 | [works/arxiv-2605-08738-translation.md](works/arxiv-2605-08738-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
