@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> **当前规模：23 篇文章**。最近一次同步：2026-08-14。
+> **当前规模：24 篇文章**。最近一次同步：2026-08-16。
 ---
 
 ## 📚 文章索引
@@ -417,9 +417,27 @@
   - 任务无关码本：双重变换后的均匀分布使码本全面覆盖数据空间
 - **技术价值**：S 级（KV 缓存向量量化的重大突破，解决超低比特量化的核心难题，系统实现完整且开源，填补仓库 KV 缓存量化方向空白）
 
+### 24. ZeroLock：基于模块化更新解耦的并发内存高效 LLM 训练
+- **原标题**：ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling
+- **作者**：Wentao Dai, Xuanran Li, Yuxiang Zhang, Ming Tang, Chao Huang
+- **日期**：2026-08-08
+- **类型**：学术论文
+- **来源**：arXiv:2608.07974
+- **译文**：[works/arxiv-2608-07974-translation.md](../works/arxiv-2608-07974-translation.md)
+- **原文**：https://arxiv.org/abs/2608.07974
+- **代码**：https://anonymous.4open.science/r/unlock_trainer-105B
+- **核心创新**：
+  - ZeroLock 算法：通过局部目标构建打破 BP 更新锁定，模块化解耦实现并发更新
+  - 首个通用理论框架：Bregman 几何下的收敛性分析，证明收敛率 Õ(1/√T)，与 BP 仅差多重对数因子
+  - 系统实现：多 GPU 服务器 + Android 原型，早转发与故障恢复技术
+  - 性能提升：相比 BP 基线，内存减少 26.5%，吞吐量提高 4.9%
+  - 边缘部署：TinyLlama Android 微调峰值 PSS < 4000 MiB，首个移动端 BP-free 训练原型
+  - 理论贡献：建立局部-全局目标映射，为解耦更新的收敛性分析提供系统方法
+- **技术价值**：S 级（边缘设备 LLM 微调完整解决方案，填补 BP-free 训练和移动端部署空白，算法-理论-系统三位一体）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 23 篇）
+## 🔍 观察项 / 候选材料（不计入 24 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|

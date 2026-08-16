@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（23 篇）
+### 翻译作品（24 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -72,6 +72,7 @@ ai_application_research/
 | SlimQwen：大规模 MoE 模型预训练中的剪枝与蒸馏探索 | 学术论文 | 2026-05-18 | [works/arxiv-2605-08738-translation.md](works/arxiv-2605-08738-translation.md) |
 | 超越 RLHF：对齐的统一理论框架 | 学术论文 | 2026-05-18 | [works/arxiv-2506-01523-translation.md](works/arxiv-2506-01523-translation.md) |
 | VecInfer：通过离群值抑制向量量化实现高效低比特 KV 缓存的 LLM 推理 | 学术论文 | 2026-07 | [works/acl-2026-1454-translation.md](works/acl-2026-1454-translation.md) |
+| ZeroLock：基于模块化更新解耦的并发内存高效 LLM 训练 | 学术论文 | 2026-08-08 | [works/arxiv-2608-07974-translation.md](works/arxiv-2608-07974-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
