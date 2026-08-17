@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（24 篇）
+### 翻译作品（25 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -73,6 +73,8 @@ ai_application_research/
 | 超越 RLHF：对齐的统一理论框架 | 学术论文 | 2026-05-18 | [works/arxiv-2506-01523-translation.md](works/arxiv-2506-01523-translation.md) |
 | VecInfer：通过离群值抑制向量量化实现高效低比特 KV 缓存的 LLM 推理 | 学术论文 | 2026-07 | [works/acl-2026-1454-translation.md](works/acl-2026-1454-translation.md) |
 | ZeroLock：基于模块化更新解耦的并发内存高效 LLM 训练 | 学术论文 | 2026-08-08 | [works/arxiv-2608-07974-translation.md](works/arxiv-2608-07974-translation.md) |
+| Intern-S2-Preview：科学智能体基础模型 | 技术报告 | 2026-08 | [works/arxiv-2608-13505-translation.md](works/arxiv-2608-13505-translation.md) |
+| 大规模隐藏解码：大语言模型的潜在计算扩展 | 学术论文 | 2026-07-09 | [works/hidden-decoding-at-scale.md](works/hidden-decoding-at-scale.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
