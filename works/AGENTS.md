@@ -42,6 +42,7 @@ pipelineSource:    # 对应 translate/<batch>/works-ready/<file>；存量手工�
 | latch-diffusion-acceleration-translation.md | Where and When to Commit: Candidate-Aware Decoding for Diffusion Language Models | arXiv:2607.28166 | 扩散语言模型加速 |
 | sparse-moe-numerical-state-translation.md | From Expert Reduction to Behavioral Divergence: Tracing Numerical State through Sparse MoE Inference | arXiv:2607.28097 | MoE 数值稳定性 |
 | virtual-width-networks-translation.md | Virtual Width Networks | arXiv:2511.11238 | Transformer 架构创新 |
+| arxiv-2608-17188-translation.md | Token Optimization and Context Window Management in Multi-Agent AI Workflows | arXiv:2608.17188 | 多智能体工作流优化 |
 
 ## 作品方向参考
 
