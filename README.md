@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（27 篇）
+### 翻译作品（28 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -76,6 +76,7 @@ ai_application_research/
 | Intern-S2-Preview：科学智能体基础模型 | 技术报告 | 2026-08 | [works/arxiv-2608-13505-translation.md](works/arxiv-2608-13505-translation.md) |
 | LLM 预预训练的不稳定性：并非总是有效——多语言调查研究 | 学术论文 | 2026-08-09 | [works/arxiv-2608-08800-translation.md](works/arxiv-2608-08800-translation.md) |
 | 大规模隐藏解码：大语言模型的潜在计算扩展 | 学术论文 | 2026-07-09 | [works/hidden-decoding-at-scale.md](works/hidden-decoding-at-scale.md) |
+| MoNe：面向高效长上下文推理的模块化神经记忆 | 学术论文 | 2026-08-18 | [works/arxiv-2608-17616-translation.md](works/arxiv-2608-17616-translation.md) |
 | 多智能体 AI 工作流中的 Token 优化与上下文窗口管理 | 学术论文 | 2026-08-17 | [works/arxiv-2608-17188-translation.md](works/arxiv-2608-17188-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
