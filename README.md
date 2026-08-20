@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（31 篇）
+### 翻译作品（32 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -81,6 +81,7 @@ ai_application_research/
 | Data-DPO：用于大模型后训练数据选择的直接偏好优化 | 学术论文 | 2026-08-05 | [works/arxiv-2608-16926-translation.md](works/arxiv-2608-16926-translation.md) |
 | 基于图结构在线难度估计的高效 RLVR 调度 | 学术论文 | 2026-08-18 | [works/arxiv-2608-17941-translation.md](works/arxiv-2608-17941-translation.md) |
 | Abra：扩散图像训练的缩放 | 学术论文 | 2026-08-18 | [works/arxiv-2608-17286-translation.md](works/arxiv-2608-17286-translation.md) |
+| Agentic ESOpt：以最小GPU内存需求微调长视距LLM智能体 | 学术论文 | 2026-08-18 | [works/arxiv-2608-17310-translation.md](works/arxiv-2608-17310-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
