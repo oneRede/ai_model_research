@@ -46,7 +46,7 @@ ai_application_research/
 
 ## 📚 收录内容
 
-### 翻译作品（28 篇）
+### 翻译作品（29 篇）
 
 | 标题 | 类型 | 发布日期 | 译文 |
 |------|------|---------|------|
@@ -78,6 +78,7 @@ ai_application_research/
 | 大规模隐藏解码：大语言模型的潜在计算扩展 | 学术论文 | 2026-07-09 | [works/hidden-decoding-at-scale.md](works/hidden-decoding-at-scale.md) |
 | MoNe：面向高效长上下文推理的模块化神经记忆 | 学术论文 | 2026-08-18 | [works/arxiv-2608-17616-translation.md](works/arxiv-2608-17616-translation.md) |
 | 多智能体 AI 工作流中的 Token 优化与上下文窗口管理 | 学术论文 | 2026-08-17 | [works/arxiv-2608-17188-translation.md](works/arxiv-2608-17188-translation.md) |
+| Data-DPO：用于大模型后训练数据选择的直接偏好优化 | 学术论文 | 2026-08-05 | [works/arxiv-2608-16926-translation.md](works/arxiv-2608-16926-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
