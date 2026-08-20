@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> **当前规模：29 篇文章**。最近一次同步：2026-08-20。
+> **当前规模：30 篇文章**。最近一次同步：2026-08-20。
 ---
 
 ## 📚 文章索引
@@ -520,9 +520,27 @@
   - 跨模型鲁棒性验证：在不同目标模型、质量评分源和嵌入源上均保持稳定性能
 - **技术价值**：S 级（SFT 数据选择方法论创新，将 DPO 迁移到数据选择领域，实验充分且性能稳定）
 
+### 30. 基于图结构在线难度估计的高效 RLVR 调度
+- **原标题**：Efficient RLVR Scheduling via Graph-Structured Online Difficulty Estimation
+- **作者**：Zhizhao Liu, Zhiliang Tian, Xi Wang, Zhihua Wen, Yihang Xiong, Zhiquan Lai, Dongsheng Li
+- **日期**：2026-08-18
+- **类型**：学术论文
+- **来源**：arXiv:2608.17941
+- **译文**：[works/arxiv-2608-17941-translation.md](../works/arxiv-2608-17941-translation.md)
+- **原文**：https://arxiv.org/abs/2608.17941
+- **核心创新**：
+  - 首次将 RLVR 动态难度估计表述为图结构化潜在变量推断问题
+  - 难度感知样本图：基于语义和推理相似性构建稀疏图（k-NN + 互为邻居过滤）
+  - 图结构化潜在模型：Potts 先验鼓励相邻样本共享潜在状态，Beta-二项模型聚合 rollout 反馈
+  - 在线平均场变分推断：坐标上升更新潜在状态分配与状态级成功概率，持续跟踪策略演化下的动态难度
+  - 即插即用组件：可集成到样本选择（PCL、GRESO）和 rollout 分配（GVM）调度器
+  - 冷启动友好：通过图传播利用相似样本历史反馈，缓解观测稀疏性
+  - 实验验证：多模型（Qwen-2.5-Math-1.5B、Llama-3.2-1B）多数据集（MATH500、AIME24/25、OlympiadBench）性能提升，低成本（~0.12h vs 45h 专用探测）
+- **技术价值**：A 级（RLVR 训练调度优化重大突破，方法论完整且具备工程实用性）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 29 篇）
+## 🔍 观察项 / 候选材料（不计入 30 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
