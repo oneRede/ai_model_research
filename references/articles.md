@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> **当前规模：30 篇文章**。最近一次同步：2026-08-20。
+> **当前规模：31 篇文章**。最近一次同步：2026-08-20。
 ---
 
 ## 📚 文章索引
@@ -538,9 +538,27 @@
   - 实验验证：多模型（Qwen-2.5-Math-1.5B、Llama-3.2-1B）多数据集（MATH500、AIME24/25、OlympiadBench）性能提升，低成本（~0.12h vs 45h 专用探测）
 - **技术价值**：A 级（RLVR 训练调度优化重大突破，方法论完整且具备工程实用性）
 
+### 31. Abra：扩散图像训练的缩放
+- **原标题**：Abra: Scaling Diffusion Image Training
+- **作者**：Kyle Chickering, Wei-An Lin, Swayam Bhanded, Dan Saunders, Akshat Tripathi, Jiaming Song, Shyamal Buch, Xinchen Yan（Luma AI）
+- **日期**：2026-08-18
+- **类型**：学术论文
+- **来源**：arXiv:2608.17286
+- **译文**：[works/arxiv-2608-17286-translation.md](../works/arxiv-2608-17286-translation.md)
+- **原文**：https://arxiv.org/abs/2608.17286
+- **核心创新**：
+  - 首次系统研究文生图扩散模型计算最优缩放定律：ABRA 模型家族（60M-2B 参数），训练跨越 10^19-10^22 FLOPs
+  - 200 TPP 规则：扩散模型计算最优点在每参数 200 个图像 token，是 LLM Chinchilla 规则（20 TPP）的 10 倍
+  - 过训练稳健性：扩散模型 2× 过训练损失惩罚 < 0.5%，远优于 LLM；实践规则：倾向更多数据而非更大模型
+  - 可预测缩放：训练损失、FID/KID/CLIPScore 等生成指标、表示质量（线性探测）均遵循幂律
+  - 缩放坍缩验证：首次证明扩散模型展现 scaling collapse 现象，训练曲线重缩放后坍缩到普适形式
+  - 分辨率效应：更高分辨率需要更多图像 token 达到计算最优（256px: 165 TPP → 768px: 247 TPP）
+  - µP 应用：使用最大更新参数化实现超参数跨模型迁移，零样本迁移学习率 4×10^(-4)
+- **技术价值**：S 级（视觉生成缩放定律重大突破，填补扩散模型计算最优研究空白，200 TPP 规则具有重要实践指导价值）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 30 篇）
+## 🔍 观察项 / 候选材料（不计入 31 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|
