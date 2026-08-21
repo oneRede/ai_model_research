@@ -10,7 +10,7 @@
 > **下游引用都是本文的冗余缓存：** 根 `README.md` / `README.en.md` 的 badge、`prompts/deep-research-tracker.md` 的去重清单、`references/AGENTS.md` 的概览表。
 > 新增/删除文章时，必须**同一次提交**更新本文 + 所有下游缓存。
 >
-> **当前规模：32 篇文章**。最近一次同步：2026-08-20。
+> **当前规模：33 篇文章**。最近一次同步：2026-08-21。
 ---
 
 ## 📚 文章索引
@@ -577,9 +577,29 @@
   - 种群敏感性研究：更强骨干模型（9B）对小种群敏感性低于较弱模型（4B）
 - **技术价值**：S 级（长视距智能体微调重大突破，ES vs RL系统对比，理论+实验完整，27B全参数微调工程价值高）
 
+### 33. ArmorOCR: 通过观察迁移自蒸馏实现基础化对抗性视觉感知
+- **原标题**：ArmorOCR: Grounded Adversarial Visual Perception via Observation-Transferred Self-Distillation
+- **作者**：Linhan Cao, Siyuan Li, Jun Lan, Liangbo He, Guannan Li, Xiaolei Huang, Jun Jia, Shuheng Zhou, Huijia Zhu, Weiqiang Wang, Wei Sun
+- **日期**：2026-08-20
+- **类型**：学术论文
+- **来源**：arXiv:2608.20122
+- **译文**：[works/armorocr-translation.md](../works/armorocr-translation.md)
+- **原文**：https://arxiv.org/abs/2608.20122
+- **代码**：https://github.com/ant-research/ArmorOCR
+- **核心创新**：
+  - AdvSpot 基准：首个区域定位的对抗性OCR评测基准，390张图像，5大类13种细粒度对抗性OCR类型（成像退化、空间操纵、字形变体、视觉编码、上下文融合）
+  - ArmorOCR 框架：两阶段训练（观察迁移自蒸馏OTSD + 群相对策略优化GRPO），内化转换视图揭示的感知能力
+  - 阶段1-OTSD：学生模型从特权转换观察中获取对抗性OCR感知，响应区域感知token加权，置信门控JSD选择性迁移
+  - 阶段2-GRPO：任务条件化奖励（定位、识别、检测、视觉问答）联合优化基础化OCR能力
+  - 系统的对抗性OCR分类法：基于失败机制组织，区域级标注（边界框、转录、类别标签、VQA对）
+  - AdvSpot性能：平均准确率55.7%，平均IoU 63.3%，在13种细粒度类型上全面超越基线模型
+  - 跨基准验证：AdvOCR平均56.0%（+1% vs VACoT），SmuggleBench平均17.1%（+0.7% vs SmugggleCoT）
+  - 保持通用OCR能力：OCRBench上与基线模型性能相当（74.0% vs 74.5%）
+- **技术价值**：S 级（首个区域定位对抗性OCR基准，观察迁移自蒸馏方法论创新，系统化分类法与实验验证）
+
 ---
 
-## 🔍 观察项 / 候选材料（不计入 32 篇）
+## 🔍 观察项 / 候选材料（不计入 33 篇）
 
 | 候选 | 类型 | 去向 | 角度 / 为何只做观察项 | 原文 |
 |---|---|---|---|---|

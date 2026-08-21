@@ -82,6 +82,7 @@ ai_application_research/
 | 基于图结构在线难度估计的高效 RLVR 调度 | 学术论文 | 2026-08-18 | [works/arxiv-2608-17941-translation.md](works/arxiv-2608-17941-translation.md) |
 | Abra：扩散图像训练的缩放 | 学术论文 | 2026-08-18 | [works/arxiv-2608-17286-translation.md](works/arxiv-2608-17286-translation.md) |
 | Agentic ESOpt：以最小GPU内存需求微调长视距LLM智能体 | 学术论文 | 2026-08-18 | [works/arxiv-2608-17310-translation.md](works/arxiv-2608-17310-translation.md) |
+| ArmorOCR: 通过观察迁移自蒸馏实现基础化对抗性视觉感知 | 学术论文 | 2026-08-20 | [works/armorocr-translation.md](works/armorocr-translation.md) |
 
 完整索引见 [references/articles.md](references/articles.md)
 
